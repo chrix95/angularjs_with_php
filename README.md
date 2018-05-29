@@ -1,2 +1,2 @@
-# angularjs_with_php
-A tutorial on sending Ajax request to PHP server script using Angular JS
+# github_api_angularjs
+A tutorial on consuming GitHub API using Angular JS

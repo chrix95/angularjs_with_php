@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Ajax Using AngularJS with PHP</title>
+    <script src="js/angular.min.js" charset="utf-8"></script>
+    <script src="index.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="MainCtrl">
+    <h1>Category Sorting</h1>
+    <div class="buttons">
+      <button type="button" name="button" ng-click="all()">All</button>
+      <button type="button" name="button" ng-click="food()">Food</button>
+      <button type="button" name="button" ng-click="fruit()">Fruits</button>
+    </div>
+    {{ error }}
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+      </tr>
+      <tr ng-repeat="response in responses | orderBy: id">
+        <td>{{ response.id }}</td>
+        <td>{{ response.name }}</td>
+        <td>{{ response.group }}</td>
+      </tr>
+    </table>
+  </body>
+</html>
